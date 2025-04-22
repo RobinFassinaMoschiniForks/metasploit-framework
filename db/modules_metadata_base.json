@@ -41862,7 +41862,7 @@
     "autofilter_ports": [],
     "autofilter_services": [],
     "targets": null,
-    "mod_time": "2024-10-31 10:52:49 +0000",
+    "mod_time": "2025-04-08 18:21:39 +0000",
     "path": "/modules/auxiliary/scanner/ldap/ldap_login.rb",
     "is_install_path": true,
     "ref_name": "scanner/ldap/ldap_login",
@@ -61666,6 +61666,65 @@
     "path": "/modules/exploits/linux/http/bentoml_rce_cve_2025_27520.rb",
     "is_install_path": true,
     "ref_name": "linux/http/bentoml_rce_cve_2025_27520",
+    "check": true,
+    "post_auth": false,
+    "default_credential": false,
+    "notes": {
+      "Stability": [
+        "crash-safe"
+      ],
+      "SideEffects": [
+        "ioc-in-logs"
+      ],
+      "Reliability": [
+        "repeatable-session"
+      ]
+    },
+    "session_types": false,
+    "needs_cleanup": null
+  },
+  "exploit_linux/http/bentoml_runner_server_rce_cve_2025_32375": {
+    "name": "BentoML's runner server RCE",
+    "fullname": "exploit/linux/http/bentoml_runner_server_rce_cve_2025_32375",
+    "aliases": [],
+    "rank": 600,
+    "disclosure_date": "2025-04-09",
+    "type": "exploit",
+    "author": [
+      "SeaWind",
+      "Takahiro Yokoyama"
+    ],
+    "description": "There was an insecure deserialization in BentoML's runner server prior to version 1.4.8.\n          By setting specific headers and parameters in the POST request, it is possible to execute unauthorized arbitrary code in the context of the user running the server,\n          which will grant initial access and information disclosure.",
+    "references": [
+      "CVE-2025-32375",
+      "URL-https://github.com/advisories/GHSA-7v4r-c989-xh26"
+    ],
+    "platform": "",
+    "arch": "",
+    "rport": 3000,
+    "autofilter_ports": [
+      80,
+      8080,
+      443,
+      8000,
+      8888,
+      8880,
+      8008,
+      3000,
+      8443
+    ],
+    "autofilter_services": [
+      "http",
+      "https"
+    ],
+    "targets": [
+      "Python payload",
+      "Linux Command"
+    ],
+    "mod_time": "2025-04-22 21:57:05 +0000",
+    "path": "/modules/exploits/linux/http/bentoml_runner_server_rce_cve_2025_32375.rb",
+    "is_install_path": true,
+    "ref_name": "linux/http/bentoml_runner_server_rce_cve_2025_32375",
     "check": true,
     "post_auth": false,
     "default_credential": false,
