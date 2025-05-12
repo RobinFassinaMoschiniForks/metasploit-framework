@@ -11412,7 +11412,7 @@
     "autofilter_ports": [],
     "autofilter_services": [],
     "targets": null,
-    "mod_time": "2023-06-26 16:57:08 +0000",
+    "mod_time": "2025-05-06 22:49:03 +0000",
     "path": "/modules/auxiliary/cloud/aws/enum_ec2.rb",
     "is_install_path": true,
     "ref_name": "cloud/aws/enum_ec2",
@@ -11442,7 +11442,7 @@
     "author": [
       "Aaron Soto <aaron.soto@rapid7.com>"
     ],
-    "description": "Provided AWS credentials, this module will call the authenticated\n                          API of Amazon Web Services to list all IAM credentials associated\n                          with the account",
+    "description": "Provided AWS credentials, this module will call the authenticated\n          API of Amazon Web Services to list all IAM credentials associated\n          with the account",
     "references": [],
     "platform": "",
     "arch": "",
@@ -11450,14 +11450,22 @@
     "autofilter_ports": [],
     "autofilter_services": [],
     "targets": null,
-    "mod_time": "2021-05-27 15:15:31 +0000",
+    "mod_time": "2025-05-06 22:49:03 +0000",
     "path": "/modules/auxiliary/cloud/aws/enum_iam.rb",
     "is_install_path": true,
     "ref_name": "cloud/aws/enum_iam",
     "check": false,
     "post_auth": false,
     "default_credential": false,
-    "notes": {},
+    "notes": {
+      "Stability": [
+        "crash-safe"
+      ],
+      "SideEffects": [
+        "ioc-in-logs"
+      ],
+      "Reliability": []
+    },
     "session_types": false,
     "needs_cleanup": false,
     "actions": []
@@ -11472,7 +11480,7 @@
     "author": [
       "Aaron Soto <aaron.soto@rapid7.com>"
     ],
-    "description": "Provided AWS credentials, this module will call the authenticated\n                          API of Amazon Web Services to list all S3 buckets associated\n                          with the account",
+    "description": "Provided AWS credentials, this module will call the authenticated\n          API of Amazon Web Services to list all S3 buckets associated\n          with the account",
     "references": [],
     "platform": "",
     "arch": "",
@@ -11480,14 +11488,22 @@
     "autofilter_ports": [],
     "autofilter_services": [],
     "targets": null,
-    "mod_time": "2021-05-27 15:15:31 +0000",
+    "mod_time": "2025-05-06 22:49:03 +0000",
     "path": "/modules/auxiliary/cloud/aws/enum_s3.rb",
     "is_install_path": true,
     "ref_name": "cloud/aws/enum_s3",
     "check": false,
     "post_auth": false,
     "default_credential": false,
-    "notes": {},
+    "notes": {
+      "Stability": [
+        "crash-safe"
+      ],
+      "SideEffects": [
+        "ioc-in-logs"
+      ],
+      "Reliability": []
+    },
     "session_types": false,
     "needs_cleanup": false,
     "actions": []
@@ -54280,7 +54296,7 @@
       "https"
     ],
     "targets": null,
-    "mod_time": "2024-11-12 11:58:57 +0000",
+    "mod_time": "2025-05-01 16:59:16 +0000",
     "path": "/modules/auxiliary/server/relay/esc8.rb",
     "is_install_path": true,
     "ref_name": "server/relay/esc8",
@@ -54364,7 +54380,7 @@
       "Spencer McIntyre",
       "Christophe De La Fuente"
     ],
-    "description": "This module supports running an SMB server which validates credentials, and\n          then attempts to execute a relay attack against an LDAP server on the\n          configured RELAY_TARGETS hosts.\n\n          It is not possible to relay NTLMv2 to LDAP due to the Message Integrity Check\n          (MIC). As a result, this will only work with NTLMv1. The module takes care of\n          removing the relevant flags to bypass signing.\n\n          If the relay succeeds, an LDAP session to the target will be created. This can\n          be used by any modules that support LDAP sessions, like `admin/ldap/rbcd` or\n          `auxiliary/gather/ldap_query`.\n\n          Supports SMBv2, SMBv3, and captures NTLMv1 as well as NTLMv2 hashes.\n          SMBv1 is not supported - please see https://github.com/rapid7/metasploit-framework/issues/16261",
+    "description": "This module supports running an SMB server which validates credentials, and\n          then attempts to execute a relay attack against an LDAP server on the\n          configured RHOSTS hosts.\n\n          It is not possible to relay NTLMv2 to LDAP due to the Message Integrity Check\n          (MIC). As a result, this will only work with NTLMv1. The module takes care of\n          removing the relevant flags to bypass signing.\n\n          If the relay succeeds, an LDAP session to the target will be created. This can\n          be used by any modules that support LDAP sessions, like `admin/ldap/rbcd` or\n          `auxiliary/gather/ldap_query`.\n\n          Supports SMBv2, SMBv3, and captures NTLMv1 as well as NTLMv2 hashes.\n          SMBv1 is not supported - please see https://github.com/rapid7/metasploit-framework/issues/16261",
     "references": [],
     "platform": "",
     "arch": "",
@@ -54372,7 +54388,7 @@
     "autofilter_ports": [],
     "autofilter_services": [],
     "targets": null,
-    "mod_time": "2025-03-13 15:24:23 +0000",
+    "mod_time": "2025-05-01 16:59:16 +0000",
     "path": "/modules/auxiliary/server/relay/smb_to_ldap.rb",
     "is_install_path": true,
     "ref_name": "server/relay/smb_to_ldap",
